@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}WikiStack{% endblock %}</title>
+    
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>  
+
+  	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  		<div class="navbar-header">
+  		<a class="navbar-brand" href="#" style="color:white;">WIKISTACK</a>
+  		</div>
+  	    <ul class="nav navbar-nav">
+  	    	<li><a href="/add">Add Page <span class="sr-only">(current)</span></a></li>
+          <li><a href="/tags">Search Tags <span class="sr-only">(current)</span></a></li>
+  	    </ul>
+  	</nav>
+    <div class="page-header"><h3>
+    {% block header %}BROWSE MY WIKISTACK{% endblock %}
+    </h3>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>

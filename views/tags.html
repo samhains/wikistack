@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} SEARCH FOR TAGS{% endblock %}
+{% block pagetitle %} SEARCH FOR TAGS{% endblock %}
+
+{% block content %}
+<form action="/tags/submit" method="POST">
+    <div class="form-group">
+        <label for="tagName">TAG NAME</label>
+        <input name="tagName" type="text" class="form-control">
+    </div>
+    <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+    
+</form>
+
+<ul>
+  {% for page in pages %}
+    <li><a href='{{page.url_name}}'>{{page|page_link}}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}Browse My WikiStack{% endblock %}
+
+{% block content %}
+<ul>
+  {% for doc in docs %}
+    <li><a href='{{doc.url_name}}'>{{doc|page_link}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}

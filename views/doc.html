@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}{{title}}{% endblock %}
+{% block header %}{{title.toUpperCase()}}{% endblock %}
+
+{% block content %}
+	<p>{{body|marked}}</p>
+	<br><br>
+	  {% for tag in tags %}
+	    <a href={{'/tags/'+tag}}>{{tag}}</a>
+	  {% endfor %}
+	  <p><a href="/similar?page={{url_name}}">Find Similar Pages</a></p>
+{% endblock %}

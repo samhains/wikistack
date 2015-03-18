@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Similar Pages for {{title}}{% endblock %}
+{% block header %}Similar Pages for {{title}}{% endblock %}
+
+{% block content %}
+<ul>
+  {% for page in pages %}
+    <li><a href='{{page.url_name}}'>{{page|page_link}}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
